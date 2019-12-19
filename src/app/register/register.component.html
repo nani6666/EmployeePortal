@@ -33,20 +33,22 @@
                     </div>
                     <div class="form-group">
                         <label>Date of birth</label>
-                         <input type="text" formControlName="dob" [ngClass]="{ 'is-invalid': submitted && f.dob.errors }" placeholder="Date of birth" class="form-control" bsDatepicker>
+                        
+                         <input type="text" formControlName="dob" [ngClass]="{ 'is-invalid': submitted && f.dob.errors }" placeholder="Date of birth" class="form-control" bsDatepicker [bsConfig]="{ isAnimated: true ,dateInputFormat: 'YYYY-MM-DD' }">
                         <div *ngIf="submitted && f.dob.errors" class="invalid-feedback">
                             <div *ngIf="f.dob.errors.required">Date of birth is required</div>
                         </div>
                     </div>
                     <div class="form-group">
                         <label>Department</label>
-                         <input type="text" formControlName="department" [ngClass]="{ 'is-invalid': submitted && f.department.errors }" placeholder="Department" class="form-control" bsDatepicker>
+                        
+                         <input type="text" formControlName="department" [ngClass]="{ 'is-invalid': submitted && f.department.errors }" placeholder="Department" class="form-control" >
                         <div *ngIf="submitted && f.department.errors" class="invalid-feedback">
-                            <div *ngIf="f.department.errors.required">Department</div>
+                            <div *ngIf="f.department.errors.required">Department is required</div>
                         </div>
                     </div>
                     <div class="form-group text-center">
-                        <button [disabled]="loading" class="btn btn-primary">Register</button>
+                        <button [disabled]="loading" class="btn btn-success">Register</button>
                         <button   routerLink="/tableList" class="btn btn-warning mr-left">Employee list</button>
                     </div>
                 </form>

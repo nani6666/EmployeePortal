@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class EmployeesDatalistService {
   employeeList = [
                   {firstName: "Raviteja",
@@ -32,5 +34,7 @@ export class EmployeesDatalistService {
                    }]
 
   constructor() { }
-
+  sortData() {
+    return this.employeeList.sort((a,b) =>  (a.firstName.toLowerCase() > b.firstName.toLowerCase() ? 1 : -1))
+  }
 }

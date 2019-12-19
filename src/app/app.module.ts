@@ -9,9 +9,10 @@ import { RegisterComponent } from './register/register.component';
 import { EmployeeTableListComponent } from './employee-table-list/employee-table-list.component';
 import { EmployeesDatalistService } from './employees-datalist.service';
 import {MaterialModule} from './material/material.module';
+
 const appRoutes: Routes = [
   { path: '', component: RegisterComponent },
-  { path: 'register', component: EmployeeTableListComponent },
+  { path: 'register', component: RegisterComponent },
   { path: 'tableList', component: EmployeeTableListComponent }
   ];
 
@@ -27,6 +28,6 @@ const appRoutes: Routes = [
                  ],
   declarations: [ AppComponent, RegisterComponent, EmployeeTableListComponent ],
   bootstrap:    [ AppComponent ],
-  providers: [EmployeesDatalistService]
+  providers: []
 })
 export class AppModule { }
