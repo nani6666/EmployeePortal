@@ -8,16 +8,20 @@ import { BsDatepickerModule } from 'ngx-bootstrap';
 import { RegisterComponent } from './register/register.component';
 import { EmployeeTableListComponent } from './employee-table-list/employee-table-list.component';
 import { EmployeesDatalistService } from './employees-datalist.service';
+import {MaterialModule} from './material/material.module';
 const appRoutes: Routes = [
   { path: '', component: RegisterComponent },
   { path: 'register', component: EmployeeTableListComponent },
-  { path: 'tableList', component: EmployeeTableListComponent }]
+  { path: 'tableList', component: EmployeeTableListComponent }
+  ];
+
 @NgModule({
   imports:      [
                  BrowserModule, 
                  FormsModule ,
                  BrowserAnimationsModule, 
                  BsDatepickerModule.forRoot(),
+                 MaterialModule,
                  ReactiveFormsModule,
                  RouterModule.forRoot( appRoutes, {enableTracing: true })
                  ],
