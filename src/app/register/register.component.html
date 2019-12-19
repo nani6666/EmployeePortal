@@ -21,10 +21,10 @@
                     </div>
                     <div class="form-group">
                         <label>Gender</label>
-                    <div class="col-12 float-left"> 
+                    <div class="col-12 float-left" [ngClass]="{'mat-form-field-invalid':submitted && f.gender.errors}"> 
                     <mat-radio-group aria-label="Select an gender" formControlName="gender"  >
-                       <mat-radio-button value="Male"  [ngClass]="{ 'is-invalid': submitted && f.gender.errors }">Male</mat-radio-button>
-                       <mat-radio-button  class ="mr-left" value="Female" [ngClass]="{ 'is-invalid': submitted && f.gender.errors }">Female</mat-radio-button>
+                       <mat-radio-button value="Male" >Male</mat-radio-button>
+                       <mat-radio-button  class ="mr-left" value="Female" >Female</mat-radio-button>
                      </mat-radio-group>
                     </div>
                         <div *ngIf="submitted && f.gender.errors" class="invalid-feedback">

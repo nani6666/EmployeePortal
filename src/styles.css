@@ -1,2 +1,9 @@
 /* Add application styles & imports to this file! */
 @import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+.mat-form-field-invalid .mat-radio-label-content{
+    color:#f44336;
+}
+.mat-form-field-invalid .mat-radio-outer-circle{
+    border-color:#f44336!important;
+}
