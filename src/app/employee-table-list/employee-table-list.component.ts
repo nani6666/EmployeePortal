@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EmployeesDatalistService } from '../employees-datalist.service';
 
 @Component({
   selector: 'app-employee-table-list',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmployeeTableListComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dataList : EmployeesDatalistService) { }
 
   ngOnInit() {
   }
